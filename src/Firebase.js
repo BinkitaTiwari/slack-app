@@ -10,7 +10,8 @@ var config = {
     storageBucket: "slack-app-38bff.appspot.com",
     messagingSenderId: "1000536932417",
     appId: "1:1000536932417:web:bf149fc68bf05f9b2bc6c0",
-    measurementId: "G-WD3KYC5QH3"
+    measurementId: "G-WD3KYC5QH3",
+    databaseURL: "https://slack-app-38bff-default-rtdb.firebaseio.com/"
   };
 
   firebase.initializeApp(config);

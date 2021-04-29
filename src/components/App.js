@@ -10,10 +10,16 @@ import MetaPanel from "./MetaPanel/MetaPanel";
 const App = (props) => (
   <Grid columns="equal" className="app" style={{ background: "#eee" }}>
     <ColorPanel />
-    <SidePanel currentUser={props.currentUser}/>
+    <SidePanel 
+    key={props.currentUser && props.currentUser.uid}
+    currentUser={props.currentUser}/>
 
     <Grid.Column style={{ marginLeft: 320 }}>
-      <Messages />
+
+      <Messages 
+      key={props.currentChannel && props.currentChannel.id}
+      currentChannel={props.currentChannel}
+      currentUser={props.currentUser} />
     </Grid.Column>
 
     <Grid.Column width={4}>
@@ -24,7 +30,8 @@ const App = (props) => (
 
 const mapStateToProps= state=>{
   return{
-    currentUser: state.user.currentUser
+    currentUser: state.user.currentUser,
+    currentChannel: state.channel.currentChannel
   }
 }
 

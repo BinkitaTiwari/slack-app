@@ -12,6 +12,10 @@ body,
   overflow-y: scroll;
 }
 
+.menu {
+  padding-bottom: 2em;
+}
+
 /*.message__form {
   padding: 1em;
   position: fixed;
